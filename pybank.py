@@ -20,10 +20,8 @@ with open(csvpath, 'r') as csv_file:
         profits_losses.append(int(row[1]))
     
         if line_count == 0:
-            #print(f'Column names are {", ".join(row)}')
             line_count += 1
         else:
-           #print(f'\t{row[0]} profits or losses') - don't need
             line_count += 1
 print(f'Total Months: {line_count} ')
 
@@ -61,8 +59,7 @@ def csv_total(ice):
     with open(ice) as a:
         csv_reader = csv.reader(a)
         csv_header = next(csv_reader)
-
- #Barb did this   
+ 
 for i in range (1, len(months)):
         change = profits_losses[i]-profits_losses[i-1]
         changes.append(change)
